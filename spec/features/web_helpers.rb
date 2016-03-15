@@ -4,3 +4,7 @@ def sign_in_and_play
   fill_in :player_2, with: 'Sachin'
   click_button('Start Battle')
 end
+
+def attack
+  click_link 'Attack'
+end
