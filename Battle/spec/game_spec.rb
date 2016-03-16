@@ -1,11 +1,15 @@
 require 'game'
 
 describe Game do
-  subject(:game) {described_class.new}
-  subject(:player) {Player.new('Bob')}
+  subject(:game) {described_class.new(bob, tina)}
+  subject(:bob) {Player.new('Bob')}
+  subject(:tina) {Player.new('Tina')}
+
     it 'attacks a player' do
-      expect(player).to receive(:lose_hp)
-      game.attack(player)
+      expect(bob).to receive(:lose_hp)
+      game.attack(bob)
     end
+
+
 
 end
