@@ -6,7 +6,6 @@ feature 'Creating new players', :type => :feature do
     fill_in :warrior_1, with: 'Bob'
     fill_in :warrior_2, with: 'Tina'
     click_button 'Create Players'
-
-    expect(page).to have_text('Warriors Bob and Tina were successfully created!')
+    expect(page).to have_text('Bob has 60 HP')
   end
 end
