@@ -16,14 +16,14 @@ enable :sessions
   end
 
   get '/play' do
-    @warrior_1 = $warrior_1.name
-    @warrior_2 = $warrior_2.name
+    @warrior_1 = $warrior_1
+    @warrior_2 = $warrior_2
     erb :play
   end
 
   get '/attack' do
-    @warrior_1 = $warrior_1.name
-    @warrior_2 = $warrior_2.name
+    @warrior_1 = $warrior_1
+    @warrior_2 = $warrior_2
     @warrior_1.attack(@warrior_2)
     erb :attack
   end
