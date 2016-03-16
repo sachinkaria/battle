@@ -4,6 +4,7 @@ require 'sinatra/base'
 
 class Battle < Sinatra::Base
   get '/' do
+    p params
     'Hello Battle!'
   end
 
