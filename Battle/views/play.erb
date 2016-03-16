@@ -1,6 +1,8 @@
-<html>Warriors <%= @warrior_1.name%> and <%= @warrior_2.name%> were successfully created!</html>
-<html><%= @warrior_1.name%> has <%= @warrior_1.hp%> HP</html>
-<html><%= @warrior_2.name%> has <%= @warrior_2.hp%> HP</html>
+<html style="text-align:center; font-family:tahoma">Warriors <%= @warrior_1.name%> and <%= @warrior_2.name%> were successfully created!</html>
+<p style="text-align:center; font-family:tahoma">
+<%= @warrior_1.name%> has 60 HP
+<%= @warrior_2.name%> has 60 HP</p>
+</html>
 
 <form action="/attack">
   <input type="submit" value='Attack!'>

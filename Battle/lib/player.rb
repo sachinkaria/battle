@@ -9,8 +9,8 @@ attr_reader :name, :hp
     @hp = hp
   end
 
-  def attack(player2)
-    player2.lose_hp
+  def attack(player)
+    player.lose_hp
   end
 
   def lose_hp
