@@ -1,13 +1,13 @@
-require 'spec_helper'
 
-RSpec.feature 'Creating new player names', :type => :feature do
+
+feature 'Creating new players', :type => :feature do
   scenario 'User enters name' do
     visit '/'
 
-    fill_in "Player 1", :with => 'Bob'
-    fill_in "Player 2", :with => 'Tina'
-    click_button 'Create Player'
+    fill_in :warrior_1, with: 'Bob'
+    fill_in :warrior_2, with: 'Tina'
+    click_button 'Create Players'
 
-    expect(page).to have_text('Player was successfully created')
+    expect(page).to have_text('Warriors Bob and Tina were successfully created!')
   end
 end
