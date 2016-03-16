@@ -5,7 +5,7 @@ require 'sinatra/base'
 class Battle < Sinatra::Base
 enable :sessions
   get '/' do
-    erb(:index)
+    erb :index
   end
 
   post '/names' do
@@ -17,8 +17,15 @@ enable :sessions
   get '/play' do
     @warrior_1 = session[:warrior_1]
     @warrior_2 = session[:warrior_2]
-    erb(:play)
+    erb :play
   end
+
+  get '/attack' do
+    @warrior_1 = session[:warrior_1]
+    @warrior_2 = session[:warrior_2]
+    erb :attack
+  end
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0
