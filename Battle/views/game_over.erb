@@ -1,6 +1,6 @@
 <html style="text-align:center; font-family:tahoma"></html>
 <div>
-    <%= @game.current_opponent.name%> is now dead! <%= @game.current_player.name%> is the winner!
+    <%= Game.instance.current_opponent.name%> is now dead! <%= Game.instance.current_player.name%> is the winner!
         <form action= '/'>
           	<button type="submit" value="newgame">New Game</button>
         </form>

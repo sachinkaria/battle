@@ -1,7 +1,7 @@
 <html style="text-align:center; font-family:tahoma"></html>
-<h1> You have attacked <%= @game.current_opponent.name%> </h1>
+<h1> You have attacked <%= Game.instance.current_opponent.name%> </h1>
     <div>
-      <%= @game.current_opponent.name%> now has <%= @game.current_opponent.hp%> HP
+      <%= Game.instance.current_opponent.name%> now has <%= Game.instance.current_opponent.hp%> HP
     </div>
         <form action= '/switching' method = 'post'>
           <button type="submit" value="done">AND THAT'S HOW IT'S DONE!</button>
