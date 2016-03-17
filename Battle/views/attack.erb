@@ -1,7 +1,8 @@
-<h1 style="text-align:center; font-family:tahoma"> You have attacked <%= @game.player_2.name%> </h1>
-<p style="text-align:center; font-family:tahoma">
-<%= @game.player_2.name%> now has <%= @game.player_2.hp%> HP
+<html style="text-align:center; font-family:tahoma"></html>
+<h1> You have attacked <%= @game.current_opponent.name%> </h1>
+<p>
+<%= @game.current_opponent.name%> now has <%= @game.current_opponent.hp%> HP
 </p>
-<form action= '/play' style="text-align:center">
-  <input type="submit" value="AND THAT'S HOW IT'S DONE!">
+<form action= '/switching' method = 'post'>
+  <button type="submit" value="done">AND THAT'S HOW IT'S DONE!</button>
 </form>
