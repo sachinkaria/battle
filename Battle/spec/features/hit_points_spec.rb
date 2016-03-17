@@ -1,6 +1,6 @@
 
 feature 'See HP' do
-  
+
   scenario 'User sees HP' do
     sign_in_and_play
     expect(page).to have_text('Bob has 60 HP')
@@ -9,9 +9,7 @@ feature 'See HP' do
 
   scenario 'after being hit, shows new HP' do
   	sign_in_and_play
-  	click_button 'Attack!'
-	click_button 'done'
+  	attacking
 	expect(page).to have_text('Tina has 50 HP')
   end
-
 end
