@@ -1,8 +1,8 @@
 require 'game'
 
 describe Game do
-  subject(:bob) { double :bob }
-  subject(:tina) { double :tina }
+  subject(:bob) { double :bob, :hp => 0 }
+  subject(:tina) { double :tina, :hp => 40 }
   subject(:game) {described_class.new(bob, tina)}
   
   	describe '#initialize' do
@@ -45,5 +45,12 @@ describe Game do
     	end
     end
 
+    describe '#game_over?' do
+
+      it 'returns true when a player reaches 0 HP' do
+        expect(game).to be_game_over
+      end
+
+    end
 
 end

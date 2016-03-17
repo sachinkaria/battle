@@ -12,11 +12,4 @@ feature 'Attack Player' do
 	expect(page).to have_text("Bob VS Tina")
   end
 
-  scenario 'player 2 dies' do
-    sign_in_and_play
-    10.times{attacking}
-    click_button 'Attack!'
-    expect(page).to have_text("is now dead!")
-  end
-
 end

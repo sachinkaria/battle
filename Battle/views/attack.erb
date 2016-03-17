@@ -1,17 +1,9 @@
 <html style="text-align:center; font-family:tahoma"></html>
 <h1> You have attacked <%= @game.current_opponent.name%> </h1>
-  <% if @game.current_opponent.hp <= 0 %>
-    <div>
-      <%= @game.current_opponent.name%> is now dead! <%= @game.current_player.name%> is the winner!
-        <form action= '/'>
-          <button type="submit" value="newgame">New Game</button>
-        </form>
-    </div>
-  <% else %>
     <div>
       <%= @game.current_opponent.name%> now has <%= @game.current_opponent.hp%> HP
+    </div>
         <form action= '/switching' method = 'post'>
           <button type="submit" value="done">AND THAT'S HOW IT'S DONE!</button>
         </form>
-    </div>
-<%end%>
+    

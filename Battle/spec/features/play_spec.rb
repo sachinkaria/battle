@@ -10,6 +10,7 @@ feature 'See HP' do
   scenario 'after being hit, shows new HP' do
   	sign_in_and_play
   	attacking
-	expect(page).to have_text('Tina has 50 HP')
+	 expect(page).to have_text('Tina has 50 HP')
   end
+
 end

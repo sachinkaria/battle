@@ -1,10 +1,10 @@
 <html style="text-align:center; font-family:tahoma"></html>
 <h1><%= @game.player_1.name%> VS <%= @game.player_2.name%>!</h1>
-<p>
+
 <div><%= @game.player_1.name%> has <%= @game.player_1.hp%> HP</div>
-<div><%= @game.player_2.name%> has <%= @game.player_2.hp%> HP</p></div>
+<div><%= @game.player_2.name%> has <%= @game.player_2.hp%> HP</div>
 
 
-<form action="/attack">
+<form action="/attack" method="post">
   <button type="submit" value='Attack!'>Attack <%= @game.current_opponent.name %></button>
 </form>

@@ -22,9 +22,18 @@ enable :sessions
     erb :play
   end
 
-  get '/attack' do
+  post '/attack' do
     @game = $game
     @game.attack
+    if @game.game_over?
+      redirect '/game_over'
+    else
+      redirect '/attack'
+    end
+  end
+
+  get '/attack' do
+    @game = $game
     erb :attack
   end
 
@@ -32,9 +41,12 @@ enable :sessions
     @game = $game
     @game.switch_player
     redirect('/play')
-
   end
 
+  get '/game_over' do
+    @game = $game
+    erb :game_over
+  end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
