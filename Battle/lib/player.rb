@@ -2,7 +2,6 @@ class Player
 
 attr_reader :name, :hp
 
-  DAMAGE = 10
   DEFAULT_HP = 60
 
   def initialize(name, hp=DEFAULT_HP)
@@ -11,7 +10,13 @@ attr_reader :name, :hp
   end
 
   def lose_hp
-    @hp -= DAMAGE
+    @hp -= random
+  end
+
+  private
+
+  def random
+    rand(10)
   end
 
 end
